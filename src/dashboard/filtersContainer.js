@@ -8,9 +8,9 @@ class FiltersContainer extends Component {
     const selectOptions = ['author', 'title']
     return (
       <div className="filters-container">
-        <Select className='filter-select desc-1 italic' onChange={this.props.onChange} searchCat={this.props.searchCat} id='searchCat' nullOption={true} options={selectOptions}/>
+        <Select className='filter-select desc-1 italic' onChange={this.props.onChange} searchCategory={this.props.searchCategory} id='searchCat' nullOption={true} options={selectOptions}/>
         <div className='search-combo'>
-          <Input className='search-text italic' searchText={this.props.searchText} onChange={this.props.onChange} id='searchText' placeholder='Buscar...'/>
+          <Input className='search-text italic' onChange={this.props.onChange} id='searchText' placeholder='Buscar...'/>
           <img className='search-button' src={search_image} onClick={this.props.onSearch}/>
         </div>
       </div>
