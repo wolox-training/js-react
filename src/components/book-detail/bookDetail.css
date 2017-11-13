@@ -1,0 +1,115 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-detail img {
+  width:191px;
+  height:272px;
+}
+
+.section-title {
+  font-family:Roboto-Bold;
+  font-size:20px;
+  line-height:19px;
+}
+
+.book-description {
+  font-size:14px;
+  line-height:19px;
+}
+
+.green {
+  color:#a5cd39;
+}
+
+.light-grey {
+  color:#999999;
+}
+
+.grey {
+  color:#4a4a4a;
+}
+
+.white {
+  color: white;
+}
+
+.margin-v-15 {
+  margin: 15px 0;
+}
+
+.padding-left-15 {
+  padding-left: 15px;
+}
+
+.rent-button {
+  background:#00adee;
+  border: 0;
+  height:38px;
+  width:192px;
+}
+
+.send-commnet-button {
+  background:#a5cd39;
+  border: 0;
+  width:192px;
+  height:38px;
+}
+
+.book-info-container {
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.padding-left-25 {
+  padding-left: 25px;
+}
+
+.padding-top-25 {
+  padding-top: 25px;
+}
+
+.commenter-avatar {
+  width:40px;
+  height:40px;
+  border-radius:100%;
+}
+
+.comment-header {
+  height: 38px;
+  justify-content: space-around;
+}
+
+.suggestion-cover {
+  height: 124px;
+  padding-left: 54px;
+  width: 87px;
+}
+
+.separator {
+  border:1px solid #00adee;
+  width:799px;
+  height:0px;
+  margin: 20px 0;
+}
+
+.comment-textarea {
+  height:73px;
+}
+
+.new-comment {
+  flex: 1;
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
