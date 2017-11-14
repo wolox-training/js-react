@@ -7,7 +7,10 @@ import BackButton from '../customComponents/backButton';
 
 class BookDetailContainer extends Component {
 
-  state = {newComment: ''}
+  state = {
+    newComment: '',
+    book: this.props.location.state.book
+  }
 
   handleChange = (key, value) => {
     this.setState({[key]: value})
@@ -22,7 +25,7 @@ class BookDetailContainer extends Component {
       <div>
         <BackButton/>
         <div className='general-container'>
-          <BookDetail />
+          <BookDetail book={this.state.book}/>
           <div className='separator'/>
           <SuggestionsContainer suggestions={suggestions}/>
           <div className='separator'/>

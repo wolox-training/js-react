@@ -13,7 +13,10 @@ class BookPreview extends Component {
   render() {
     const book = this.props.book
     if (this.state.redirect) {
-      return <Redirect to={`/books/${book.id}`}/>;
+      return <Redirect to={{
+        pathname: `/books/${book.id}`,
+        state: {book}
+      }}/>;
     }
 
     return (

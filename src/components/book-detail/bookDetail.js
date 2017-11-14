@@ -6,16 +6,17 @@ import Button from '../customComponents/button'
 class BookDetail extends Component {
 
   render() {
+    const book = this.props.book
     return (
       <div className='book-detail flex'>
-        <img className='book-cover' src='http://kittentoob.com/wp-content/uploads/2014/09/SF1-1024x768.jpg'/>
+        <img className='book-cover' src={book.image_url}/>
         <div className='book-info-container flex-column'>
-          <span className='section-title bold'>Titulo</span>
-          <span className='sub-title grey'>Autor</span>
-          <span className='sub-title grey'>Año</span>
-          <span className='sub-title grey'>Tematica</span>
+          <span className='section-title bold'>{book.title}</span>
+          <span className='sub-title grey'>{book.author}</span>
+          <span className='sub-title grey'>{book.year}</span>
+          <span className='sub-title grey'>{book.genre}</span>
           <p className='book-description light-grey'>Hola esta es la extensa descripcion del libro</p>
-          <Button className='rent-button section-title bold white' text='Alquilar'/>
+          <Button className='rent-button section-title bold white' text='Rent'/>
         </div>
       </div>
     );
