@@ -8,7 +8,7 @@ class Button extends Component {
   render() {
     return (
       <button
-        type='button'
+        type={this.props.type || 'button'}
         {...this.props}
         onClick={this.handleClick}>
         {this.props.text}

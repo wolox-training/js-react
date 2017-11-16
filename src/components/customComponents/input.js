@@ -8,11 +8,14 @@ class Input extends Component {
 
   render() {
     return (
-      <input
-        type='text'
-        onChange={this.handleChange}
-        className={this.props.className}
-        placeholder={this.props.placeholder}/>
+      <div className={`${this.props.containerClass} ${this.props.title ? 'flex-column padding-top-20' : ''}`}>
+        {this.props.title ? <span className={this.props.titleClass}>{this.props.title}</span> : ''}
+        <input
+          type={this.props.type || 'text'}
+          onChange={this.handleChange}
+          className={this.props.className}
+          placeholder={this.props.placeholder}/>
+      </div>
     )
   }
 }

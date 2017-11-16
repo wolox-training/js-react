@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom'
+import Logout from './logout';
 import Button from './button';
 
 class BackButton extends Component {
   render() {
     return (
-      <Link to={'/dashboard'}>&lt;Volver</Link>
+      <div>
+        <Link to={'/dashboard'}>&lt;Volver</Link>
+        <Logout/>
+      </div>
     )
   }
 }

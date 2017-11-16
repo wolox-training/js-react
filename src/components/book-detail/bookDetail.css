@@ -23,30 +23,6 @@
   line-height:19px;
 }
 
-.green {
-  color:#a5cd39;
-}
-
-.light-grey {
-  color:#999999;
-}
-
-.grey {
-  color:#4a4a4a;
-}
-
-.white {
-  color: white;
-}
-
-.margin-v-15 {
-  margin: 15px 0;
-}
-
-.padding-left-15 {
-  padding-left: 15px;
-}
-
 .rent-button {
   background:#00adee;
   border: 0;
@@ -64,14 +40,6 @@
 .book-info-container {
   justify-content: space-between;
   padding-left: 20px;
-}
-
-.padding-left-25 {
-  padding-left: 25px;
-}
-
-.padding-top-25 {
-  padding-top: 25px;
 }
 
 .commenter-avatar {
@@ -104,12 +72,4 @@
 
 .new-comment {
   flex: 1;
-}
-
-.padding-top-10 {
-  padding-top: 10px;
-}
-
-.padding-top-20 {
-  padding-top: 20px;
 }

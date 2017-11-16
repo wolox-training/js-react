@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './dashboard.css';
+import '../../base.css';
 import books from './books';
 import BooksContainer from './booksContainer';
 import FiltersContainer from './filtersContainer';
