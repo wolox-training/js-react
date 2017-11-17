@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Button extends Component {
+
+  static defaultProps = {
+    type: 'button'
+  }
+
   handleClick = () => {
     this.props.onClick();
   }
@@ -8,7 +13,7 @@ class Button extends Component {
   render() {
     return (
       <button
-        type={this.props.type || 'button'}
+        type={this.props.type}
         {...this.props}
         onClick={this.handleClick}>
         {this.props.text}

@@ -5,8 +5,10 @@ import Button from '../customComponents/button';
 import '../../base.css';
 import './login.css';
 
-const emailRegex = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-const passwordRegex = /^.{8,52}/;
+const validations = {
+  email: /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/,
+  password: /^.{8,52}/
+}
 
 class LoginContainer extends Component {
 
@@ -28,7 +30,7 @@ class LoginContainer extends Component {
   }
 
   validate = (key, value) => {
-    this.setState({[`${key}Error`]: key === 'email' ? !emailRegex.test(this.state[key]) : !passwordRegex.test(this.state[key]),
+    this.setState({[`${key}Error`]: !validations[key].test(this.state[key]),
     [`${key}Pristine`]: false})
   }
 

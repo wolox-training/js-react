@@ -5,8 +5,6 @@ class PrivateRoute extends Component {
 
   render() {
     const logged = localStorage.getItem('loggedUser') ? true : false
-    console.log('this is the user'+localStorage.getItem('loggedUser'))
-    console.log('this is the logged var'+logged)
     return (
       <Route render={props => (
         logged ? React.createElement(
