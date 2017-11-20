@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import Input from '../customComponents/input';
 import Button from '../customComponents/button';
-import ApiService from '../customComponents/apiService';
-import axios from 'axios';
+import AuthService from '../customComponents/authService';
 import '../../base.css';
 import './login.css';
 
@@ -46,10 +45,9 @@ class LoginContainer extends Component {
       this.setState({loginValidityError: true})
     }
     if(!this.state.passwordError && !this.state.emailError) {
-      ApiService.login(this.state.email, this.state.password)
+      AuthService.login(this.state.email, this.state.password)
       .then( (response) => {
         localStorage.setItem('loggedUser', this.state.email);
-        ApiService.setToken(response.data.access_token)
         this.setState({redirect: true})
       })
       .catch( () => {

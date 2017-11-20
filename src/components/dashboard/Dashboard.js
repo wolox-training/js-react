@@ -4,7 +4,7 @@ import '../../base.css';
 import books from './books';
 import BooksContainer from './booksContainer';
 import FiltersContainer from './filtersContainer';
-import ApiService from '../customComponents/apiService';
+import BookService from '../customComponents/bookService';
 
 
 
@@ -17,7 +17,7 @@ class GeneralContainer extends Component {
   }
   
   getBooks = () => {
-    ApiService.bookList().then((response) => {
+    BookService.bookList().then((response) => {
       this.setState({books: response.data})
     })
   }

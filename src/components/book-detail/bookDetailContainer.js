@@ -5,7 +5,7 @@ import CommentsContainer from './commentsContainer';
 import SuggestionsContainer from './suggestionsContainer';
 import BookDetail from './bookDetail';
 import BackButton from '../customComponents/backButton';
-import ApiService from '../customComponents/apiService';
+import BookService from '../customComponents/bookService';
 
 class BookDetailContainer extends Component {
 
@@ -19,7 +19,7 @@ class BookDetailContainer extends Component {
   }
 
   getBook = () => {
-    ApiService.getBook(this.props.computedMatch.params.id).then((response) => {
+    BookService.getBook(this.props.computedMatch.params.id).then((response) => {
       this.setState({book: response.data})
     })
   }
