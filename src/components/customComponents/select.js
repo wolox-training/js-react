@@ -10,8 +10,8 @@ class Select extends Component {
       <select
         onChange={this.handleChange}
         value={this.props.searchCategory}
-        className={this.props.className}>
-        {this.props.nullOption ? <option  value='' selected disabled>Seleccionar Filtro</option> : ''}
+        className={this.props.className} defaultValue=''>
+        {this.props.nullOption ? <option  value='' disabled>Seleccionar Filtro</option> : ''}
         {this.props.options.map((opt) => {
           return <option value={opt}>{opt}</option>
           })}
