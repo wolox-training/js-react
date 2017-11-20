@@ -4,13 +4,22 @@ import '../../base.css';
 import books from './books';
 import BooksContainer from './booksContainer';
 import FiltersContainer from './filtersContainer';
+import BookService from '../customComponents/bookService';
+
+
 
 class GeneralContainer extends Component {
 
   state = {
     searchText: '',
     searchCat:'',
-    books: books
+    books: []
+  }
+  
+  getBooks = () => {
+    BookService.bookList().then((response) => {
+      this.setState({books: response.data})
+    })
   }
 
   handleChange = (key, value) => {
@@ -23,6 +32,10 @@ class GeneralContainer extends Component {
         return b[this.state.searchCat].toLowerCase().search(this.state.searchText.toLowerCase()) !== -1
         })})
     }
+  }
+
+  componentWillMount() {
+    this.getBooks()
   }
 
   render() {

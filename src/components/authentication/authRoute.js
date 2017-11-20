@@ -4,7 +4,8 @@ import { Route, Redirect } from 'react-router-dom'
 class AuthRoute extends Component {
 
   render() {
-    const logged = localStorage.getItem('loggedUser') ? true : false
+    const logged = localStorage.getItem('loggedUser');
+    const Comp = this.props.component;
     return (
       <Route render={props => (
         logged ? (
@@ -13,10 +14,7 @@ class AuthRoute extends Component {
             state: { from: props.location }
           }}/>
         ) : 
-          React.createElement(
-            this.props.component,
-            {...this.props}
-          )
+          <Comp {...this.props} />
       )}/>
     );
   }

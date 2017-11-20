@@ -13,7 +13,7 @@ class CommentsContainer extends Component {
         <div className='padding-left-25'>
           <NewCommentContainer newComment={this.props.newComment} onChange={this.props.onChange}/>
           {this.props.comments.map((comment) => {
-            return <Comment className='padding-top-25 comment flex' comment={comment}/>
+            return <Comment className='padding-top-25 comment flex' key={comment} comment={comment}/>
           })}
         </div>
       </div>
