@@ -47,7 +47,7 @@ class LoginContainer extends Component {
     if(!this.state.passwordError && !this.state.emailError) {
       AuthService.login(this.state.email, this.state.password)
       .then( (response) => {
-        localStorage.setItem('loggedUser', this.state.email);
+        localStorage.setItem('token', response.data.access_token);
         this.setState({redirect: true})
       })
       .catch( () => {

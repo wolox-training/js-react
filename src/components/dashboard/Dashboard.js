@@ -7,7 +7,6 @@ import FiltersContainer from './filtersContainer';
 import BookService from '../customComponents/bookService';
 
 
-
 class GeneralContainer extends Component {
 
   state = {
@@ -26,13 +25,6 @@ class GeneralContainer extends Component {
     this.setState({[key]: value});
   }
 
-  applyFilter = () => {
-    if(this.state.searchCat) {
-      this.setState({books: books.filter((b) => {
-        return b[this.state.searchCat].toLowerCase().search(this.state.searchText.toLowerCase()) !== -1
-        })})
-    }
-  }
 
   componentWillMount() {
     this.getBooks()

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom';
+import AuthService from '../customComponents/authService';
 
 class PrivateRoute extends Component {
 
   render() {
-    const logged = localStorage.getItem('loggedUser')
+    const logged = localStorage.getItem('token')
+    if(logged) {
+      AuthService.setToken(logged);
+    }
     const Comp = this.props.component;
     return (
       <Route render={props => (

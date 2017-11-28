@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 class AuthRoute extends Component {
 
   render() {
-    const logged = localStorage.getItem('loggedUser');
+    const logged = localStorage.getItem('token');
     const Comp = this.props.component;
     return (
       <Route render={props => (
