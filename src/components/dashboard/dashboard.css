@@ -67,30 +67,6 @@
 	margin: 35px;
 }
 
-.desc-1 {
-	font-size: 14px;
-	padding-bottom: 2px;
-}
-
-.desc-2 {
-	font-size: 12px;
-}
-
-.bold {
-	font-weight: bold;
-}
-
-.sub-title {
-	font-size: 16px;
-}
-
-.italic {
-	font-style: italic;
-}
-
-.pad-top-10 {
-	padding-top: 10px;
-}
 
 .book-details {
 	display: flex;

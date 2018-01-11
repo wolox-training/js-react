@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './bookDetail.css';
+import '../../base.css';
 import CommentsContainer from './commentsContainer';
 import SuggestionsContainer from './suggestionsContainer';
 import BookDetail from './bookDetail';
